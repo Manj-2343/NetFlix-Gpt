@@ -95,3 +95,24 @@ deploy our app to production mode
 create signUp user Account
 Implement SignIn UserApi
 successfully created the redux store with userSlice
+BugFix:Sign up user displayName and Profile picture update
+BugFix:If the user is not Logged in Direct/browse to login page and vice-versa
+UnSubSubscribed to the onAuthStateChanged callback
+add hardcoded value to the const file.
+Register for tmdb api and get access token
+make get data from tmdb now playing moveis list
+useCustom hook
+-update store with movieData
+design the BrowsePage
+{/_ {
+MainVideo Container
+-video Background
+-video Title
+SecondaryContainer
+-MovieList _ n
+-Cards _ n
+} _/}
+-Fetch data for trailer video  
+-Update the store with trailer video data
+-embed the youtube video
+-make the video auto play with muted.

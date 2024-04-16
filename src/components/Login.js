@@ -10,6 +10,7 @@ import { auth } from "../utils/firebase";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/UserSlice";
+import { photoURL } from "../utils/constant";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -24,7 +25,7 @@ const Login = () => {
   };
   const handleButtonClick = () => {
     //validate the form data
-    const nameValue = name.current.value;
+    const nameValue = name.current ? name.current.value : null;
     const emailValue = email.current.value;
     const passwordValue = password.current.value;
     const message = checkValidData(emailValue, passwordValue);
@@ -39,8 +40,7 @@ const Login = () => {
           const user = userCredential.user;
           updateProfile(user, {
             displayName: nameValue,
-            photoURL:
-              "https://img.freepik.com/free-psd/3d-illustration-person-with-sunglasses_23-2149436188.jpg?size=626&ext=jpg&ga=GA1.1.344060918.1677903533&semt=ais",
+            photoURL: photoURL,
           })
             .then(() => {
               const { uid, email, displayName, photoURL } = auth.currentUser;
@@ -52,12 +52,11 @@ const Login = () => {
                   photoURL: photoURL,
                 })
               );
-              navigate("/browse");
             })
             .catch((error) => {
               setErrorMessage(error.message);
+              navigate("/");
             });
-          console.log(user);
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -69,8 +68,6 @@ const Login = () => {
       signInWithEmailAndPassword(auth, emailValue, passwordValue)
         .then((userCredential) => {
           const user = userCredential.user;
-          console.log(user);
-          navigate("/browse");
         })
         .catch((error) => {
           const errorCode = error.code;
