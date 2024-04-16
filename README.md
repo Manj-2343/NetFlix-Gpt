@@ -116,3 +116,10 @@ SecondaryContainer
 -Update the store with trailer video data
 -embed the youtube video
 -make the video auto play with muted.
+-build the secondary component.
+secondary container
+{
+MovieList-Popular
+MovieList-Trending
+movieList-Horror
+}

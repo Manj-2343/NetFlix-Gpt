@@ -33,7 +33,7 @@ const VideoTitle = ({ title, overview }) => {
         <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded opacity-60">
           <span className="flex text-gray-50">
             <svg
-              class="w-6 h-6 text-gray-800 dark:text-white"
+              className="w-6 h-6 text-gray-800 dark:text-white"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -45,7 +45,7 @@ const VideoTitle = ({ title, overview }) => {
                 stroke="currentColor"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                stroke-width="2"
+                strokeWidth="2"
                 d="M10 11h2v5m-2 0h4m-2.592-8.5h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
               />
             </svg>
