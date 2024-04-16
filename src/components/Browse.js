@@ -6,7 +6,10 @@ import SecondaryContainer from "./SecondaryContainer";
 import usePopularMovies from "../hooks/usePopularMovies";
 import useUpComingMovie from "../hooks/useUpComingMovie";
 import useTopRatedMovies from "../hooks/useTopRatedMovies";
+import GPTSearch from "./GPTSearch";
+import { useSelector } from "react-redux";
 const Browse = () => {
+  const showGPTSearchView = useSelector((store) => store.gpt.showGptSearch);
   // fetch data from TMDB api and update teh store
   useNowPlayingMovies();
   usePopularMovies();
@@ -15,8 +18,14 @@ const Browse = () => {
   return (
     <div>
       <Header />
-      <MainContainer />
-      <SecondaryContainer />
+      {showGPTSearchView ? ( 
+        <GPTSearch />
+      ) : (
+        <>
+          <MainContainer />
+          <SecondaryContainer />
+        </>
+      )}
     </div>
   );
 };

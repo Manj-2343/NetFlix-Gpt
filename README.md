@@ -123,3 +123,8 @@ MovieList-Popular
 MovieList-Trending
 movieList-Horror
 }
+build the secondary component.
+build movie card
+tmdb cdn url
+-GPT search feature
+

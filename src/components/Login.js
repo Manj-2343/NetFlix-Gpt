@@ -10,7 +10,7 @@ import { auth } from "../utils/firebase";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/UserSlice";
-import { photoURL } from "../utils/constant";
+import { BACKGROUND_IMAGE, photoURL } from "../utils/constant";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -80,10 +80,7 @@ const Login = () => {
     <div>
       <Header />
       <div className="absolute">
-        <img
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/c1366fb4-3292-4428-9639-b73f25539794/3417bf9a-0323-4480-84ee-e1cb2ff0966b/IN-en-20240408-popsignuptwoweeks-perspective_alpha_website_large.jpg"
-          alt="netflix image"
-        />
+        <img src={BACKGROUND_IMAGE} alt="netflix image" />
       </div>
       <div className="absolute inset-0 flex items-center justify-center ">
         <form

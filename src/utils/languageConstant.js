@@ -1,0 +1,26 @@
+const lang = {
+  en: {
+    search: "Search",
+    gptSearchPlaceHolder: "What would you like to watch today?",
+  },
+  hindi: {
+    search: "खोज",
+    gptSearchPlaceHolder: "आज आप क्या देखना चाहेंगे?",
+  },
+  spanish: {
+    search: "Buscar",
+    gptSearchPlaceHolder: "¿Qué te gustaría ver hoy?",
+  },
+  arabic: {
+    search: "يبحث",
+    gptSearchPlaceHolder: "ماذا تريد أن تشاهد اليوم؟",
+  },
+};
+export default lang;
+
+export const SUPPORTED_LANGUAGE = [
+  { identifier: "en", name: "English" },
+  { identifier: "hindi", name: "Hindi" },
+  { identifier: "arabic", name: "Arabic" },
+  { identifier: "spanish", name: "Spanish" },
+];
